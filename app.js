@@ -618,6 +618,20 @@ function renderParts(containerId, parts, changedFields) {
   }).join('');
 }
 
+function getPunjabiSentence(tenseId, verb) {
+  if (TRANSLATIONS[tenseId] && TRANSLATIONS[tenseId][verb]) {
+    return TRANSLATIONS[tenseId][verb].pa || "";
+  }
+  return "";
+}
+
+function getHindiSentence(tenseId, verb) {
+  if (TRANSLATIONS[tenseId] && TRANSLATIONS[tenseId][verb]) {
+    return TRANSLATIONS[tenseId][verb].hi || "";
+  }
+  return "";
+}
+
 function renderMachine(suffix, tenseId) {
   const meta = TENSES[tenseId];
   const vd = getVerbData();
@@ -625,6 +639,8 @@ function renderMachine(suffix, tenseId) {
   document.getElementById('eng' + suffix).textContent = meta.english;
   document.getElementById('sentFr' + suffix).textContent = getFrenchSentence(tenseId, currentVerb);
   document.getElementById('sentEn' + suffix).textContent = getEnglishSentence(tenseId, currentVerb);
+  document.getElementById('sentPa' + suffix).textContent = getPunjabiSentence(tenseId, currentVerb);
+  document.getElementById('sentHi' + suffix).textContent = getHindiSentence(tenseId, currentVerb);
 }
 
 function getChangedFields(partsA, partsB) {

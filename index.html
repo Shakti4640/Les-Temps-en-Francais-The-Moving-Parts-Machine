@@ -67,6 +67,8 @@
   .sentence-row { text-align: center; padding: 0.8rem; background: rgba(56,189,248,0.05); border-radius: 10px; margin-top: 0.5rem; }
   .sentence-fr { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.2rem; }
   .sentence-en { font-size: 0.85rem; color: var(--dim); font-style: italic; }
+  .sentence-pa { font-size: 0.9rem; color: #ffffff; font-weight: 600; margin-top: 0.25rem; }
+  .sentence-hi { font-size: 0.9rem; color: #b8860b; font-weight: 600; margin-top: 0.15rem; }
   .arrow-section { text-align: center; padding: 0.3rem 0; }
   .arrow-section .arrow { font-size: 1.8rem; color: var(--accent); animation: bounce 1.5s infinite; }
   @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(4px)} }
@@ -127,6 +129,8 @@
   <div class="legend-item"><div class="legend-dot" style="background:var(--helper)"></div> Helping Verb</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--verb)"></div> Verb / Past Participle</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--object)"></div> Object (fixed)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ffffff"></div> Punjabi</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#b8860b"></div> Hindi</div>
 </div>
 
 <div class="selector-area">
@@ -151,6 +155,8 @@
     <div class="sentence-row">
       <div class="sentence-fr" id="sentFrA"></div>
       <div class="sentence-en" id="sentEnA"></div>
+      <div class="sentence-pa" id="sentPaA"></div>
+      <div class="sentence-hi" id="sentHiA"></div>
     </div>
   </div>
   <div class="arrow-section">
@@ -165,6 +171,8 @@
     <div class="sentence-row">
       <div class="sentence-fr" id="sentFrB"></div>
       <div class="sentence-en" id="sentEnB"></div>
+      <div class="sentence-pa" id="sentPaB"></div>
+      <div class="sentence-hi" id="sentHiB"></div>
     </div>
   </div>
 </div>
@@ -218,6 +226,7 @@
   Reference: <a href="https://shakti4640.github.io/les-temps-en-francais/" target="_blank">Les Temps en Français — Complete Guide</a>
 </footer>
 
+<script src="translations.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
